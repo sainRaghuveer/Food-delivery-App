@@ -15,6 +15,7 @@ const userSchema = new mongoose.Schema({
         required:true
     },
     address: {
+        type:Object,
         street: {
             type: String
         },
@@ -33,8 +34,8 @@ const userSchema = new mongoose.Schema({
     }
 }, {timestamps:true});
 
-const userMOdel = mongoose.model("user", userSchema);
+const userModel = mongoose.model("user", userSchema);
 
 module.exports={
-    userMOdel
+    userModel
 }
