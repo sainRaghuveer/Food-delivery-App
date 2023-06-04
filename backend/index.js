@@ -39,5 +39,5 @@ app.listen(process.env.port, async()=>{
     }catch(error){
         console.log(error);
     }
-    console.log(`Server is running at port ${process.env.port}`);
+    console.log(`Server is running at PORT ${process.env.port}`);
 })
