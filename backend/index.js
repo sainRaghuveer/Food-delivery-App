@@ -7,12 +7,16 @@ const { restaurantRouter } = require('./routes/restaurant.route');
 
 require('dotenv').config();
 
+//Creating app
 const app =express();
 
+//To get access of multiple domaine
 app.use(cors());
 
+//Parsing configuration
 app.use(express.json());
 
+//Default routes
 app.get("/", (req, res)=>{
     res.send("Welcome to the foodApp backend! 🪄");
 });
@@ -27,6 +31,7 @@ app.use(authentication);
 //restaurant routes
 app.use("/api", restaurantRouter);
 
+//Server
 app.listen(process.env.port, async()=>{
     try{
         await connection;
