@@ -32,12 +32,12 @@ app.use(authentication);
 app.use("/api", restaurantRouter);
 
 //Server
-app.listen(process.env.port, async()=>{
+app.listen(process.env.PORT, async()=>{
     try{
         await connection;
         console.log("connected with foodApp DB");
     }catch(error){
         console.log(error);
     }
-    console.log(`Server is running at PORT ${process.env.port}`);
+    console.log(`Server is running at PORT ${process.env.PORT}`);
 })
