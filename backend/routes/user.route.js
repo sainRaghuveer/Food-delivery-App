@@ -62,7 +62,7 @@ userRouter.post("/users/login", async (req, res) => {
 
 });
 
-
+//Password reset route
 userRouter.patch("/users/:id/reset", async (req, res) => {
     const userId = req.params.id;
     const { password } = req.body;
