@@ -11,6 +11,10 @@ restaurantRouter.post("/restaurant", (req, res)=>{
     res.send("authentication is working fine");
 });
 
+restaurantRouter.delete("/restaurant", (req, res)=>{
+    res.send("authentication is working fine");
+});
+
 
 
 module.exports={
